@@ -98,7 +98,7 @@ exports.deleteProduct = (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
-  req.user.getProducts().then((rows)=>{
+  req.user.getProducts.then((rows)=>{
     res.render('admin/products', {
       prods: rows,
       pageTitle: 'Admin Product',
